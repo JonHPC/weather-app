@@ -3,9 +3,7 @@ let url = `http://api.openweathermap.org/data/2.5/weather?q=London&APPID=73664a6
 async function getWeatherData(url){
     const response = await fetch(url);
     const weatherData = await response.json();
-    //const {weatherObj} = weatherData;
-    //weatherObj.name = weatherData.name;
-    
+
     return weatherData;
 }
 
