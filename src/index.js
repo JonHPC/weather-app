@@ -5,7 +5,7 @@ import style from "./style.css";
 //default data
 let location = "los angeles";
 let units = "imperial";
-const weatherPromise = apiModule.getWeatherData(`http://api.openweathermap.org/data/2.5/weather?APPID=73664a6c4f77b058e4b132cb234af364&q=${location}&units=${units}`, {mode:'cors',});
+const weatherPromise = apiModule.getWeatherData(`https://api.openweathermap.org/data/2.5/weather?APPID=73664a6c4f77b058e4b132cb234af364&q=${location}&units=${units}`, {mode:'cors',});
 
 weatherPromise.then((result)=> {
     console.log(result);
