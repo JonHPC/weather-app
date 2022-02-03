@@ -36,7 +36,7 @@ tempUnits.addEventListener('click', () => {
 });
 
 function displayData(locationInput, unitsInput){
-    let weatherPromise = apiModule.getWeatherData(`http://api.openweathermap.org/data/2.5/weather?APPID=73664a6c4f77b058e4b132cb234af364&q=${locationInput}&units=${unitsInput}`, {mode:'cors',});
+    let weatherPromise = apiModule.getWeatherData(`https://api.openweathermap.org/data/2.5/weather?APPID=73664a6c4f77b058e4b132cb234af364&q=${locationInput}&units=${unitsInput}`, {mode:'cors',});
     weatherPromise.then((result)=> {
     console.log(result);
     domModule.updateWeatherText(result, `${units}`);
