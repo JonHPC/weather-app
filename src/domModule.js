@@ -20,7 +20,7 @@ function updateWeatherText(data, units){
     location.textContent = `${data.name}`.toUpperCase();
     conditions.textContent = `${data.weather[0].description}`.toUpperCase();
     temperature.textContent = `TEMPERATURE: ${Math.round(data.main.temp)} ${tempUnit}`;
-    weather.src = `http://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
+    weather.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
     tempUnitsText.textContent = `UNITS: ${tempUnit}`;
     feelsLike.textContent = `FEELS LIKE: ${data.main.feels_like} ${tempUnit}`; 
     wind.textContent = `WIND: ${data.wind.speed} ${windUnit}`;
