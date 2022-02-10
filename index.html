@@ -14,17 +14,32 @@
 
 <body>
     <div class="container">
+        <form id="input-form">
+            <label>Enter City Name</label>
+            <input type="text" id="input-box" name="input-box" placeholder="Los Angeles" required>
+            <input type="submit" id="submit-btn" value="Submit">
+        </form>
         <img src="" alt="" srcset="" id="weather-icon">
         <div id="location">Unable to Fetch Weather</div>
-        <div class="desc">No Information Available.</div>
         <div class="weather">
-            <div class="c">Error</div>
-            <div class="circle"></div>
-            <div class="f">Error</div>
+            <div id="temperature">Error</div>
+        </div>
+        <div id="conditions">No Information Available</div>
+        <div id="temp-range">
+            <div id="temp-high">No Information Available</div>
+            <div id="temp-low">No Information Available</div>
+        </div>
+        <div class="toggle">
+            <button id="toggle-units">Toggle Units</button>
         </div>
         <div class="info">
-            <h4>Sunrise: <span class="sunrise">No Information Available</span></h4>
-            <h4>Sunset: <span class="sunset">No Information Available</span></h4>
+            <h4>Sunrise: <span id="sunrise">No Information Available</span></h4>
+            <h4>Sunset: <span id="sunset">No Information Available</span></h4>
+            <h4>Feels Like: <span id="feels-like">No Information Available</span></h4>
+            <h4>Wind Speed: <span id="wind-spd">No Information Available</span></h4>
+            <h4>Wind Direction: <span id="wind-dir">No Information Available</span></h4>
+            <h4>Humidity: <span id="humidity">No Information Available</span></h4>
+            <h4>Pressure: <span id="pressure">No Information Available</span></h4>
         </div>
 
     </div>
