@@ -5,30 +5,106 @@
   }
 
   body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Inter', sans-serif;
+    color:white;
+    background: rgb(133, 214, 251);
+    background: radial-gradient(
+      circle,
+      rgba(108, 178, 206, 0.633) 0%,
+      rgba(70, 137, 175, 0.841) 35%,
+      rgb(69, 117, 145) 100%
+    );
+    min-width:40%;
+    min-height:40%;
   }
 
   .container {
     height: 100vh;
     width: 100vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    background: rgb(251, 242, 133);
-    background: radial-gradient(
-      circle,
-      rgba(251, 242, 133, 0.6334908963585435) 0%,
-      rgba(224, 196, 91, 0.8407738095238095) 35%,
-      rgba(230, 224, 113, 1) 100%
-    );
+    display: grid;
+    justify-items:center;
+    gap:1em;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.25fr repeat(3, 1fr) 0.25fr;
+    padding-left:30%;
+    padding-right:30%;
   }
 
-  .weather {
+  #input-form{
+    grid-column: 1 / 4;
+    grid-row: 1 / 2;
+    padding-top:1em;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:1em;
+
+  }
+
+  #submit-btn{
+    background-color: #4c74af85;
+    border:none;
+    border-radius:16px;
+    color: white;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition: 0.3s;
+    font-weight:300;
+  }
+
+  #submit-btn:hover{
+    background-color:#4c74afe1;
+  }
+
+  .weather{
+    grid-column: 2 / 3;
+    grid-row: 2 / 5;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    gap:0.5em;
+    margin-top:1em;
+  }
+
+  #temperature {
     display: flex; 
     align-items: center;
     margin: 15px 0;
     font-size: 3rem;
+  }
+
+  #sunrise-card{
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+
+  #sunset-card{
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+  }
+
+  #wind-spd-card{
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+  }
+
+  #wind-dir-card{
+    grid-column: 3 / 4;
+    grid-row: 3 / 4;
+  }
+
+  #humidity-card{
+    grid-column: 1 / 2;
+    grid-row: 4 / 5;
+  }
+
+  #pressure-card{
+    grid-column: 3 / 4;
+    grid-row: 4 / 5;
   }
 
   #location {
@@ -43,13 +119,45 @@
   #temp-range{
     display:flex;
     justify-content:space-around;
-    gap:2em;
   }
 
-  .circle {
-    background-color: black;
-    border-radius: 50px;
-    height: 15px;
-    width: 15px;
-    margin: 0 15px;
-  }
+.card{
+  background-color:rgba(71, 99, 126, 0.308);
+  border-radius:16px;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-start;
+  align-items:left;
+  padding:16px;
+  width:20vw;
+  height:20vh;
+  max-width: 256px;
+  max-height:256px;
+  font-weight:400;
+  min-height:128px;
+  min-width:128px;
+  font-size:1.75vw;
+}
+
+h4{
+  color:rgba(255, 255, 255, 0.473);
+  font-weight:300;
+}
+
+#toggle-units{
+  background-color: #4c74af85;
+  border:none;
+  border-radius:16px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition: 0.3s;
+  font-weight:300;
+}
+
+#toggle-units:hover{
+  background-color:#4c74afe1;
+}
