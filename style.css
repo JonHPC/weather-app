@@ -14,31 +14,39 @@
       rgba(70, 137, 175, 0.841) 35%,
       rgb(69, 117, 145) 100%
     );
-    min-width:40%;
-    min-height:40%;
   }
 
   .container {
     height: 100vh;
     width: 100vw;
     display: grid;
-    justify-items:center;
-    gap:1em;
+    justify-items:space-evenly;
+    align-items: stretch;
+    gap:16px;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 0.25fr repeat(3, 1fr) 0.25fr;
-    padding-left:30%;
-    padding-right:30%;
+    padding-left:5%;
+    padding-right:5%;
   }
 
   #input-form{
-    grid-column: 1 / 4;
+    grid-column: 1 / -1;
     grid-row: 1 / 2;
     padding-top:1em;
     display:flex;
     align-items:center;
-    justify-content:space-between;
+    justify-content:center;
     gap:1em;
+    background-color:rgba(71, 99, 126, 0.308);
+    border-radius:16px;
+    padding-bottom:1em;
+    margin-top:1em;
+  }
 
+  #input-box{
+    border-radius:0.5em;
+    border:none;
+    padding:0.5em;
   }
 
   #submit-btn{
@@ -66,15 +74,39 @@
     flex-direction:column;
     justify-content:center;
     align-items:center;
-    gap:0.5em;
-    margin-top:1em;
+    gap:1em;
+    background-color:rgba(71, 99, 126, 0.308);
+    border-radius:16px;
+    padding:2em;
+    min-height:550px;
+    min-width:192px;
+    padding-bottom:3.5em;
+  }
+
+  #location {
+    font-size: 2rem;
+    font-weight: 800;
   }
 
   #temperature {
-    display: flex; 
-    align-items: center;
-    margin: 15px 0;
     font-size: 3rem;
+  }
+
+  
+  #conditions {
+    font-size: 1rem;
+    text-transform: capitalize;
+  }
+
+  #temp-range{
+    display:flex;
+    justify-content:space-around;
+    gap:1em;
+    font-size:1em;
+  }
+
+  #feels-text, #feels-like{
+    font-size:1em;
   }
 
   #sunrise-card{
@@ -83,13 +115,13 @@
   }
 
   #sunset-card{
-    grid-column: 3 / 4;
-    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
   }
 
   #wind-spd-card{
-    grid-column: 1 / 2;
-    grid-row: 3 / 4;
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
   }
 
   #wind-dir-card{
@@ -107,20 +139,6 @@
     grid-row: 4 / 5;
   }
 
-  #location {
-    font-size: 2rem;
-    font-weight: 800;
-  }
-  #conditions {
-    font-size: 1.25rem;
-    text-transform: capitalize;
-  }
-
-  #temp-range{
-    display:flex;
-    justify-content:space-around;
-  }
-
 .card{
   background-color:rgba(71, 99, 126, 0.308);
   border-radius:16px;
@@ -129,15 +147,10 @@
   justify-content:flex-start;
   align-items:left;
   padding:16px;
-  width:20vw;
-  height:20vh;
-  max-width: 256px;
-  max-height:256px;
   font-weight:400;
-  min-height:128px;
-  min-width:128px;
-  font-size:1.75vw;
 }
+
+
 
 h4{
   color:rgba(255, 255, 255, 0.473);
@@ -160,4 +173,65 @@ h4{
 
 #toggle-units:hover{
   background-color:#4c74afe1;
+}
+
+@media only screen and (min-width: 600px){
+  #city-name{font-size:1em;}
+  .card {font-size: 1.75em;}
+  .weather{gap:1em;}
+  #location{font-size: 1.25em;}
+  #temperature{font-size:2em;}
+  #conditions{font-size:1em;}
+  #temp-range{font-size:1em;}
+  #feels-text{font-size:1em;}
+}
+
+
+@media only screen and (max-width: 600px){
+  .card {font-size: 1.25em; }
+  .weather{gap:1em;}
+  #location{font-size: 1.25em;}
+  #temperature{font-size:2em;}
+  #conditions{font-size:1em;}
+  #temp-range{font-size:1em;}
+  #feels-text{font-size:1em;}
+}
+
+@media only screen and (min-width: 768px){
+  #city-name{font-size:1.25em;}
+  .card{font-size:2em;}
+  .weather{gap:1.5em;}
+  #location{font-size: 1.75em;}
+  #temperature{font-size:2.5em;}
+  #conditions{font-size:1.25em;}
+  #temp-range{font-size:1.25em;}
+  #feels-text{font-size:1.25em;} 
+}
+
+@media only screen and (min-width: 992px){
+  #city-name{font-size:1.25em;}
+  .card{font-size:2.25em;}
+  .weather{gap:1.75em;}
+  #location{font-size: 2.25em;}
+  #temperature{font-size:3em;}
+  #conditions{font-size:1.75em;}
+  #temp-range{font-size:1.75em;}
+  #feels-text{font-size:1.75em;}
+}
+
+@media only screen and (min-width: 1200px){
+  #city-name{font-size:1.5em;}
+  .card{font-size:2.5em;}
+  .weather{gap:2em;}
+  #location{font-size: 2.5em;}
+  #temperature{font-size:3.5em;}
+  #conditions{font-size:2.25em;}
+  #temp-range{font-size:2.25em;}
+  #feels-text{font-size:2.25em;}
+}
+
+@media only screen and (max-height: 800px){
+  .weather{gap:1em;}
+ 
+  
 }

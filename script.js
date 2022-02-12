@@ -32,6 +32,8 @@ document.querySelector('#input-form').addEventListener('submit', (e) => {
   if(inputBox.value){
     getCoords(inputBox.value);
   }
+
+  inputBox.value = "";
 })
 
 const toggleBtn = document.getElementById('toggle-units');
@@ -81,7 +83,7 @@ function updateDOM(){
       feelsLikeText.textContent = `${feels_like.toFixed(0)} ${tempUnits}`;
       windSpeedText.textContent = `${speed.toFixed(0)} ${windUnits}`;
       windDirText .textContent= `${deg}°`;
-      humidityText.textContent = `${humidity}%`;
+      humidityText.textContent = `${Math.round((humidity * 100) / 100)}%`;
       pressureText.textContent = `${inHg.toFixed(2)} inHg`;
     });
 }

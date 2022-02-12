@@ -5,33 +5,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Weather app</title>
+    <title>Weather App</title>
     <link rel="stylesheet" href="style.css" />
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/126c7f6012.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <div class="container">
         <form id="input-form">
-            <label>Enter City Name</label>
+            <label id="city-name">Enter City Name</label>
             <input type="text" id="input-box" name="input-box" placeholder="Los Angeles" required>
             <input type="submit" id="submit-btn" value="Submit">
         </form>
         <div class="weather">
+            <div id="location">---</div>
+            <div id="temperature">--°C</div>
             <img src="" alt="" srcset="" id="weather-icon">
-            <div id="location">Unable to Fetch Weather</div>
-            <div id="temperature">Error</div>
-            <div id="conditions">No Information Available</div>
+            <div id="conditions">--</div>
             <div id="temp-range">
-                <div id="temp-high">No Information Available</div>
-                <div id="temp-low">No Information Available</div>
+                <div id="temp-high">H:--°</div>
+                <div id="temp-low">L:--°</div>
             </div>
-            <p>Feels Like: <span id="feels-like">No Information Available</span></p>
+            <p id="feels-text">Feels Like: <span id="feels-like">--°C</span></p>
             <div class="toggle">
                 <button id="toggle-units">Toggle Units</button>
             </div>
@@ -39,32 +39,32 @@
         <div class="card" id="sunrise-card">
             <i class="fa-solid fa-sunrise"></i>
             <h4>Sunrise</h4>
-            <p id="sunrise">No Information Available</p>
+            <p id="sunrise">--:-- AM</p>
         </div>
         <div class="card" id="sunset-card">
             <i class="fa-solid fa-sunset"></i>
             <h4>Sunset</h4>
-            <p id="sunset">No Information Available</p>
+            <p id="sunset">--:-- PM</p>
         </div>
         <div class="card" id="wind-spd-card">
             <i class="fa-solid fa-wind"></i>
             <h4>Wind Speed</h4>
-            <p id="wind-spd">No Information Available</p>
+            <p id="wind-spd">-- m/s</p>
         </div>
         <div class="card" id="wind-dir-card">
             <i class="fa-solid fa-arrow-right"></i>
             <h4>Wind Direction</h4>
-            <p id="wind-dir">No Information Available</p>
+            <p id="wind-dir">--°</p>
         </div>
         <div class="card" id="humidity-card">
             <i class="fa-solid fa-raindrops"></i>
             <h4>Humidity</h4>
-            <p id="humidity">No Information Available</p>
+            <p id="humidity">--%</p>
         </div>
         <div class="card" id="pressure-card">
             <i class="fa-solid fa-gauge"></i>
             <h4>Pressure</h4>
-            <p id="pressure">No Information Available</p>
+            <p id="pressure">--.-- inHg</p>
         </div>
     </div>
     <script src="script.js"></script>
