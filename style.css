@@ -83,6 +83,10 @@
     padding-bottom:3.5em;
   }
 
+  #weather-icon{
+    filter:invert(100%);
+  }
+
   #location {
     font-size: 2rem;
     font-weight: 800;
@@ -150,6 +154,13 @@
   font-weight:400;
 }
 
+.card-img{
+  color:rgba(255, 255, 255, 0.473);
+  height:16px;
+  width:16px;
+  filter: invert(100%) opacity(50%);
+}
+
 
 
 h4{
@@ -179,55 +190,65 @@ h4{
   #city-name{font-size:1em;}
   .card {font-size: 1.75em;}
   .weather{gap:1em;}
+  #weather-icon{height:48px; width:48px;}
   #location{font-size: 1.25em;}
   #temperature{font-size:2em;}
   #conditions{font-size:1em;}
   #temp-range{font-size:1em;}
   #feels-text{font-size:1em;}
+  .card-img{height:24px; width:24px;}
 }
 
 
 @media only screen and (max-width: 600px){
   .card {font-size: 1.25em; }
   .weather{gap:1em;}
+  #weather-icon{height:48px; width:48px;}
   #location{font-size: 1.25em;}
   #temperature{font-size:2em;}
   #conditions{font-size:1em;}
   #temp-range{font-size:1em;}
   #feels-text{font-size:1em;}
+  .card-img{height:24px; width:24px;}
 }
 
 @media only screen and (min-width: 768px){
   #city-name{font-size:1.25em;}
   .card{font-size:2em;}
   .weather{gap:1.5em;}
+  #weather-icon{height:64px; width:64px;}
   #location{font-size: 1.75em;}
   #temperature{font-size:2.5em;}
   #conditions{font-size:1.25em;}
   #temp-range{font-size:1.25em;}
   #feels-text{font-size:1.25em;} 
+  .card-img{height:32px; width:32px;}
 }
 
 @media only screen and (min-width: 992px){
   #city-name{font-size:1.25em;}
   .card{font-size:2.25em;}
   .weather{gap:1.75em;}
+  #weather-icon{height:96px; width:96px;}
   #location{font-size: 2.25em;}
   #temperature{font-size:3em;}
   #conditions{font-size:1.75em;}
   #temp-range{font-size:1.75em;}
   #feels-text{font-size:1.75em;}
+  .card-img{height:48px; width:48px;}
 }
 
 @media only screen and (min-width: 1200px){
   #city-name{font-size:1.5em;}
   .card{font-size:2.5em;}
   .weather{gap:2em;}
+  #weather-icon{height:128px; width:128px;}
   #location{font-size: 2.5em;}
   #temperature{font-size:3.5em;}
   #conditions{font-size:2.25em;}
   #temp-range{font-size:2.25em;}
   #feels-text{font-size:2.25em;}
+  .card-img{height:64px; width:64px;}
 }
 
 @media only screen and (max-height: 800px){

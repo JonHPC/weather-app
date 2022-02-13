@@ -12,6 +12,7 @@ let tempUnits = '°C';
 
 
 const iconImg = document.getElementById('weather-icon');
+const windDirArrow = document.getElementById('wind-dir-arrow');
 const loc = document.getElementById('location');
 const temperature = document.getElementById('temperature');
 const conditionsText = document.getElementById('conditions');
@@ -62,7 +63,8 @@ function updateDOM(){
       const {speed, deg} = data.wind;
      
 
-      const iconUrl = `https://openweathermap.org/img/wn/${icon}@2x.png`;
+      //const iconUrl = `https://openweathermap.org/img/wn/${icon}@2x.png`;
+      const iconUrl = `./icons/${icon}.png`;
 
       // Converting Epoch(Unix) time to GMT
       const sunriseGMT = new Date(sunrise * 1000);
@@ -73,6 +75,7 @@ function updateDOM(){
 
       // Update DOM
       iconImg.src = iconUrl;
+      windDirArrow.style.transform = `rotate(${deg}deg)`;
       loc.textContent = `${place}`;
       temperature.textContent = `${temp.toFixed(0)}${tempUnits}`;
       conditionsText.textContent = `${description}`;
