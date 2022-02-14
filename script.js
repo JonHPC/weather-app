@@ -61,7 +61,8 @@ function updateDOM(){
       const { description, icon } = data.weather[0];
       const { sunrise, sunset} = data.sys;
       const {speed, deg} = data.wind;
-     
+      const timezone = data.timezone;
+      console.log(timezone);
 
       //const iconUrl = `https://openweathermap.org/img/wn/${icon}@2x.png`;
       const iconUrl = `./icons/${icon}.png`;
